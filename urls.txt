@@ -1,0 +1,11 @@
+
+class exercise #1 - a tag for index.ejs
+<a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif"></a>
+
+walmart api
+http://api.walmartlabs.com/v1/items/12417832?apiKey=sgppjctyv87z5vekuywkpz5e&format=json
+http://api.walmartlabs.com/v1/stores?apiKey=sgppjctyv87z5vekuywkpz5e&city=houston&format=json
+
+walmart developer api documentation
+https://developer.walmartlabs.com/docs
+
