@@ -9,3 +9,5 @@ http://api.walmartlabs.com/v1/stores?apiKey=sgppjctyv87z5vekuywkpz5e&city=housto
 walmart developer api documentation
 https://developer.walmartlabs.com/docs
 
+Pat Howard's codeweather6 app running in the cloud
+http://codeweather6-scungy-neoplasticism.mybluemix.net/city?name=tampa
