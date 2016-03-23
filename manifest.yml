@@ -1,0 +1,10 @@
+---
+applications:
+- name: codeweather6
+  framework: node
+  runtime: node08
+  memory: 512M
+  instances: 1
+  host: codeweather6-${random-word}
+  path: .
+  command: node app.js
