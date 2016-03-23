@@ -75,13 +75,10 @@ router.route("/city").get(function(req, res){
 
 
 //mongo api to fetch the code for the city
-	api.find(cityName, function(err, cityCode){
-			if (err) {
-				console.log("MongoDB lookup failed")}
-				else 	{
-				// dynamically build the walmart ap and fetch stores
-				createWalmartAPI(cityName, function(err, reqURL) {
+	api.find(cityName, function(err, cityCode){			
 
+				// dynamically build the walmart api and fetch stores
+				createWalmartAPI(cityName, function(err, reqURL) {
 					    request(reqURL, function(err, response, body ) {
 					        if (!err && response.statusCode === 200) {
 					          walmartData = JSON.parse( body );
@@ -91,12 +88,13 @@ router.route("/city").get(function(req, res){
 												walmartData = [];
 												walmartData[0] = walmartDefault;
 											};
+
 										// dynamically build the yahoo api and fetch forecast
 										createUrl(cityCode[0].code, function(err, reqURL){
-
 													request(reqURL, function(err, response, body ) {
     													if (!err && response.statusCode === 200) {
       													data = JSON.parse( body );
+
 																// render to browser
       													res.render('index', {Visitors: userCount,
                            														Date: data.query.results.channel.item.forecast[0].date,
@@ -116,7 +114,6 @@ router.route("/city").get(function(req, res){
 							}
 						});
 					});
-				}
 			});
 		});
 

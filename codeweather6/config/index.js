@@ -27,7 +27,18 @@ exports.find = function(city, cb) {
           collection.find(cityObj).toArray(function(err, docs) {
               console.log("Found the following records");
               console.dir(docs);
-              cb(null, docs);
+
+              if (docs.length < 1) {
+                console.log("MongoDB lookup failed. Setting default");
+                console.dir(docs.length);
+                var cityCodeDefault = {
+              		city: "honolulu",
+              		code: '2423945'
+              	};
+                docs[0] = cityCodeDefault;
+              };
+
+              cb(err, docs);
             });
           }
         })
