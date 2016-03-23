@@ -1,0 +1,9 @@
+
+{"name": "sampleapp3",
+  "main": "server.js",
+  "dependencies": {
+      "express": "*",
+      "request": "*",
+      "url": "*"
+    }
+}

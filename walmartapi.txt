@@ -1,0 +1,7 @@
+WalMart API
+application codeweather6
+key sgppjctyv87z5vekuywkpz5e
+
+rate limit:
+5 calls per second
+5000 calls per day

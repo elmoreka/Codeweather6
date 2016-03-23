@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <style>
+    #map {
+      width: 500px;
+      height: 400px;
+      background-color: #ccc;
+    }
+    </style>
+  	<!--edit the title for your own name-->
+    <title>My nodejs web site</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  	<!--edit the h1 tag and include your own name-->
+    <h1>My Weather Site </h1>
+
+    <p>Learn more about me and my new Weather Company here</p>
+      <ul>
+		    <li><a href="sports.html">My favorite sports</a></li>
+		    <li><a href="aboutme.html">About Me</a></li>
+  	  </ul>
+
+    <p>The number of visitors today is: <%= Visitors %></p>
+    <p>The Weather Forecast for <%= City %></p>
+    <p>Date: <%= Date %></p>
+    <p>Day: <%= Day %></p>
+    <p>High: <%= High %></p>
+    <p>Low: <%= Low %></p>
+    <p>Conditions: <%= Conditions %></p>
+    <p>Your Nearest Walmart Store is Right Around the Corner</p>
+    <p><%= Name %></p>
+    <p><%= StreetAddress %></p>
+    <p><%= CityAddress %></p>
+    <p><%= StateAddress %></p>
+    <p><%= PhoneNumber %></p>
+    <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif"></a>
+    <div style="height300px; width:500px">
+        <div id="map" style="height300px; width:500px"></div>
+    </div>
+   <script>
+     function initMap() {
+       var mapDiv = document.getElementById('map');
+       var map = new google.maps.Map(mapDiv, {
+         center: {lat: 44.540, lng: -78.546},
+         zoom: 8
+       });
+     }
+   </script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGo3Ru_ibEJTKBlCsbKJr4PCngADFOcws&callback=initMap"
+       async defer></script>
+  </body>
+</html>
